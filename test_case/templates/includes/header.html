@@ -1,0 +1,45 @@
+{% load static %}
+<nav class="navbar navbar-light navbar-expand-lg" style="background-color: lightskyblue">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      {% with request.resolver_match.view_name as view_name %}
+      <ul class="navbar-nav ms-auto mb-auto">
+        <li class="nav-item"> 
+          <a class="nav-link {% if view_name  == 'index' %}active{% endif %}"
+            href="{% url 'ritm_style:index' %}">Главная</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link {#{% if view_name  == 'index' %}active{% endif %}#}"
+            {#href="{% url 'ritm_style:index' %}"#}>Сеансы</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link {#{% if view_name  == 'index' %}active{% endif %}#}"
+            {#href="{% url 'ritm_style:index' %}"#}>Отзывы</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link {#{% if view_name  == 'index' %}active{% endif %}#}"
+            {#href="{% url 'ritm_style:index' %}"#}>Контакты</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link {% if view_name  == 'news' %}active{% endif %}"
+            href="{% url 'ritm_style:news' %}">Новости</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link {#{% if view_name  == 'index' %}active{% endif %}#}"
+            {#href="{% url 'ritm_style:index' %}"#}>Обо мне</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link {% if view_name  == 'blog' %}active{% endif %}"
+            href="{% url 'ritm_style:blog' %}">Блог</a>
+        </li>
+      </ul>
+      {% endwith %}
+    </div>
+  </div>
+</nav>
