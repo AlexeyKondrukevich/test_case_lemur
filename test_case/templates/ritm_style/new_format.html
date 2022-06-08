@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
-<title>{% block title %}Новый формат сеансов{% endblock %}</title>
+{% load static %}
+{% block title %}Новый формат сеансов{% endblock %}
 
 {% block content %}
-  <div class="container py-5" align="center">     
-    <h1>Новый формат сеансов</h1>
+<div class="container py-5">     
+  <h1 align="center">Новый формат сеансов</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-1-2">
+        <div style="margin-right: 70px">
+          {% include 'includes/text_new_format.txt' %}
+        </div>
+      </div>
+      <div class="col-1-2">
+        <img src="{% static 'img/girl_sunset.png' %}" alt="girl_sunset" style="float:right;width: 100%">
+      </div>
+    </div>
   </div>
+</div>
 {% endblock %}

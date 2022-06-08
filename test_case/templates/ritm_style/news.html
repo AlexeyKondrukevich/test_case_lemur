@@ -1,14 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
-<title>{% block title %}Новости{% endblock %}</title>
+{% block title %}Новости{% endblock %}
 
 {% block content %}
-  <div class="container py-5">
-    <a class="navbar-brand" href="{% url 'ritm_style:new_format' %}">
-        <div class="image2">
-          <img src="{% static 'img/girl_under_water.png' %}" style="filter: opacity(50%)">
-          <h3><span>Новый формат сеансов</span></h3>
-        </div>
-    </a>
-  </div>
+<div class="container py-5">
+  <h1 align="center">Новости</h1>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          {% include 'includes/href_new_format.html' %}
+        </td>
+        <td>
+          {% include 'includes/href_new_format.html' %}
+        </td>
+        <td>
+          {% include 'includes/href_new_format.html' %}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          {% include 'includes/href_new_format.html' %}
+        </td>
+        <td>
+          {% include 'includes/href_new_format.html' %}
+        </td>
+        <td>
+          {% include 'includes/href_new_format.html' %}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 {% endblock %}

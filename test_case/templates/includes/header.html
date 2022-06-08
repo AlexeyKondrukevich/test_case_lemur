@@ -2,7 +2,7 @@
 <nav class="navbar navbar-light navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="{% static 'img/logo.png' %}" width="50" height="50" class="d-inline-block align-top" alt="logo">
     </a>
       {% with request.resolver_match.view_name as view_name %}
       <div class="container">
@@ -35,7 +35,7 @@
             <a class="nav-link {% if view_name  == 'blog' %}active{% endif %}"
               href="{% url 'ritm_style:blog' %}">Блог</a>
           </li>
-          <li style="display: inline-block" align="left"> 
+          <li style="display: inline-block"> 
             {% include 'includes/feedback.html' %}
           </li>
         </ul>

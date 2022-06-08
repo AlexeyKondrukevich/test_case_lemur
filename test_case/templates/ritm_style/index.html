@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
-<title>{% block title %}Акватерапия RitmStyle{% endblock %}</title>
+{% block title %}Акватерапия RitmStyle{% endblock %}
 
 {% block content %}
   <div class="container py-5" align="center">
     <div class="image">
-      <img src="{% static 'img/girl.png' %}" style="filter: opacity(50%)">
+      <img src="{% static 'img/girl.png' %}" style="filter: opacity(50%)" width="100%" alt="girl">
       <h2><span>Акватерапия</br>RitmStyle</span></h2>
     </div>
   </div>  

@@ -37,7 +37,6 @@
 
 .image {
     position: relative;
-    width: 100%
 }
 
 h2 {
@@ -68,8 +67,18 @@ h3 {
 
 h3 span {
     color: #fff;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 55px;
+}
+
+.col-1-2 {
+    width: 50%;
+    float: left;
+}
+
+.row {
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 *,
@@ -620,7 +629,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media (min-width:576px) {
@@ -2708,8 +2717,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    background-color: #3c88b9;
+    border-color: #3c88b9
 }
 
 .btn-primary:hover {
