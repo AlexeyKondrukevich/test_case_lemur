@@ -14,3 +14,8 @@ def news(request):
 def blog(request):
     template = "ritm_style/blog.html"
     return render(request, template)
+
+
+def new_format(request):
+    template = "ritm_style/new_format.html"
+    return render(request, template)
