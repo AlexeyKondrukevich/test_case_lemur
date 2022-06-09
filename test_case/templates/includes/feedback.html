@@ -1,13 +1,11 @@
 {% load static %}
 
   <div class="text-center">
-    <!-- Кнопка, открывающая модальное окно -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#feedbackFormModal">
       Записаться на сеанс
     </button>
   </div>
 
-  <!-- Форма обратной связи в модальном окне -->
   <div class="modal" id="feedbackFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -19,11 +17,9 @@
         </div>
         <div class="modal-body">
 
-          <!-- Форма обратной связи -->
           <form id="feedbackForm" action={% static "php/process.php" %} enctype="multipart/form-data" novalidate>
             <div class="form-row">
               <div class="col-sm-6">
-                <!-- Имя пользователя -->
                 <div class="form-group">
                   <label for="name" class="control-label">Имя</label>
                   <input id="name" type="text" name="name" class="form-control" value="" placeholder="Имя" minlength="2" maxlength="30" required="required">
@@ -31,7 +27,6 @@
                 </div>
               </div>
               <div class="col-sm-6">
-                <!-- Email пользователя -->
                 <div class="form-group">
                   <label for="email" class="control-label">Email-адрес</label>
                   <input id="email" type="email" name="email" required="required" class="form-control" value="" placeholder="Email-адрес">
@@ -39,18 +34,14 @@
                 </div>
               </div>
             </div>
-            <!-- Сообщение пользователя -->
             <div class="form-group">
               <label for="message" class="control-label">Сообщение</label>
               <textarea id="message" name="message" class="form-control" rows="3" placeholder="Сообщение"
                 maxlength="500" required="required"></textarea>
               <div class="invalid-feedback"></div>
             </div>
-            <!-- Капча -->
             <div class="form-group captcha">
-              <img class="img-captcha" src={% static "php/captcha.php" %} data-src={% static "php/captcha.php" %} alt="">
-              {#<img src = {% static "php/captcha.php" %} />#}
-              {#<input type = "text" name = "kapcha" />#}
+              <img class="img-captcha" src={% static "php/captcha.php" %} data-src={% static "php/captcha.php" %} alt="captcha">
               <div class="btn btn-light refresh-captcha">Обновить</div>
               <div class="form-group">
                 <label for="captcha" class="control-label">Код, показанный на изображении</label>
@@ -59,7 +50,6 @@
                 <div class="invalid-feedback"></div>
               </div>
             </div>
-            <!-- Пользовательское солашение -->
             <div class="form-group agreement">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" name="agree" class="custom-control-input" id="customCheck">
@@ -68,16 +58,13 @@
                   с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных».</label>
               </div>
             </div>
-            <!-- Сообщение -->
             <div class="alert alert-danger form-error d-none">
               Исправьте данные и отправьте форму ещё раз.
             </div>
-            <!-- Кнопка для отправки формы  disabled="disabled"-->
             <div class="text-right submit">
               <button type="submit" class="btn btn-primary" disabled="disabled">Отправить сообщение</button>
             </div>
           </form>
-          <!-- Сообщение об успешной отправки формы -->
           <div class="alert alert-success form-success mb-0 d-none">
             Форма успешно отправлена. Нажмите на
             <a href="#" data-form="#feedbackForm">ссылку</a>, чтобы отправить ещё одно сообщение.
